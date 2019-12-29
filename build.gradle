@@ -1,0 +1,30 @@
+plugins {
+	id 'org.springframework.boot' version '2.1.10.RELEASE'
+	id 'io.spring.dependency-management' version '1.0.8.RELEASE'
+	id 'java'
+}
+
+group = 'com.nobody'
+sourceCompatibility = '1.8'
+
+repositories {
+	mavenLocal()
+    maven { url 'http://maven.aliyun.com/nexus/content/groups/public/' }
+    mavenCentral()
+}
+
+dependencies {
+
+	testCompile(
+	
+            'org.springframework.boot:spring-boot-starter-test',
+    )
+
+    compile(
+    
+    		'org.springframework.boot:spring-boot-devtools',
+            'org.springframework.boot:spring-boot-starter-web',
+			'org.apache.cxf:cxf-spring-boot-starter-jaxws:3.3.3',
+            
+    )
+}
